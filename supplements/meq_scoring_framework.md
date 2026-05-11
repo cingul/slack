@@ -8,7 +8,7 @@ Midodrine Equivalents (MEQ; also called ME in some STANDUP source documents) qua
 
 **Version:** 1.0-STANDUP draft  
 **Anchor:** Each medication's usual maximum daily dose for OH is assigned 100 MEQ.  
-**Primary use:** Pre/post comparison of OH medication burden after supracardiac venous angioplasty and/or stenting.
+**Primary use:** Pre/post comparison of OH medication burden in intervention trials, including but not limited to supracardiac venous angioplasty and/or stenting.
 
 ## Core definition
 
@@ -75,9 +75,9 @@ Use a consistent window for each study:
 - **Follow-up MEQ:** prescribed daily regimen or average actual use during the 7 days before the follow-up visit.
 - **Primary endpoint MEQ:** prespecify the follow-up window, such as 3 months, 6 months, or the latest available stable follow-up.
 
-## Preferred STANDUP de-escalation order
+## Example STANDUP de-escalation order
 
-The source medication de-escalation framework recommends the following clinician-directed sequence after intervention:
+The source STANDUP medication de-escalation framework recommends the following clinician-directed sequence after venous intervention:
 
 1. droxidopa;
 2. pyridostigmine;

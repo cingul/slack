@@ -1,16 +1,16 @@
-# MEQ and STANDUP manuscript workspace
+# OH/OI outcomes manuscript workspace
 
 This repository contains source documents and working drafts for a manuscript on
-Midodrine Equivalents (MEQ) as a medication-burden endpoint in orthostatic
-hypotension research, with emphasis on the STANDUP supracardiac venous
-angioplasty/stenting framework.
+reporting outcomes in orthostatic hypotension (OH) and orthostatic intolerance
+(OI) intervention trials. Midodrine Equivalents (MEQ) are included as the
+medication-burden domain for OH-directed vasoactive therapy.
 
 ## Working draft
 
-- `manuscripts/midodrine_equivalents_jugular_stenting_orthostatic_hypotension.md`
-  - publication-style manuscript draft
-  - incorporates the uploaded STANDUP source documents, MEQ framework, medication
-    de-escalation framework, and citation-supported background
+- `manuscripts/reporting_outcomes_orthostatic_hypotension_intolerance_trials.md`
+  - publication-style methods/recommendations manuscript
+  - proposes a multidomain reporting framework for OH/OI intervention trials
+  - incorporates MEQ as one medication-burden reporting tool
 
 ## Supplements
 
@@ -19,6 +19,9 @@ angioplasty/stenting framework.
   - calculation examples
   - medication de-escalation sequence
   - suggested endpoint definitions
+- `supplements/outcome_reporting_checklist.md`
+  - practical checklist for protocols, statistical analysis plans, abstracts,
+    manuscripts, and case series
 
 ## References
 
@@ -34,4 +37,5 @@ angioplasty/stenting framework.
 - `Medication De-Escalation.pdf`
 
 Before journal submission, confirm the final author list, IRB language, trial
-registration details, locked dataset values, and target journal formatting.
+registration details, locked dataset values if STANDUP data are used as an
+illustrative example, and target journal formatting.
