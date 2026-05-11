@@ -12,12 +12,13 @@
   </defs>
   <rect width="1080" height="690" fill="#fbf8f0"/>
   <rect x="34" y="34" width="1012" height="622" rx="28" fill="#ffffff" stroke="#d8a23a" stroke-width="3"/>
-  <text x="540" y="80" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" fill="#16324f">Figure 1. Multidomain outcome framework</text>
-  <text x="540" y="112" text-anchor="middle" font-family="Georgia, serif" font-size="18" fill="#5b6572">Domains 1-6 form the shared core; Domain 7 demonstrates intervention-specific target engagement.</text>
-  <circle cx="540" cy="350" r="112" fill="url(#center)" filter="url(#shadow)"/>
-  <text x="540" y="326" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#ffffff">Patient-centered</text>
-  <text x="540" y="353" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#ffffff">net benefit</text>
-  <text x="540" y="386" text-anchor="middle" font-family="Georgia, serif" font-size="15" fill="#eef6f7">benefit + burden + safety</text>
+  <text x="540" y="76" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" fill="#16324f">Figure 1. Multidomain outcome framework</text>
+  <text x="540" y="107" text-anchor="middle" font-family="Georgia, serif" font-size="18" fill="#5b6572">Domains 1-6 form the shared core; Domain 7 bridges innovation to clinical metrics.</text>
+  <circle cx="540" cy="340" r="112" fill="url(#center)" filter="url(#shadow)"/>
+  <text x="540" y="304" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#ffffff">Patient-centered</text>
+  <text x="540" y="331" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#ffffff">net benefit</text>
+  <text x="540" y="362" text-anchor="middle" font-family="Georgia, serif" font-size="15" fill="#eef6f7">benefit + burden + safety</text>
+  <text x="540" y="389" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#fff8e8">MEQ quantifies medication burden</text>
 
   <g font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" fill="#16324f">
     <rect x="95" y="168" width="250" height="78" rx="14" fill="#eef6f7" stroke="#177e89" stroke-width="2"/>
@@ -32,9 +33,9 @@
     <text x="860" y="199" text-anchor="middle">3. Function / QOL</text>
     <text x="860" y="224" text-anchor="middle" font-size="13" font-weight="400" fill="#5b6572">falls, ADLs, SF-36</text>
 
-    <rect x="95" y="438" width="250" height="78" rx="14" fill="#eef6f7" stroke="#177e89" stroke-width="2"/>
+    <rect x="95" y="438" width="250" height="78" rx="14" fill="#fff8e8" stroke="#d8a23a" stroke-width="2.4"/>
     <text x="220" y="469" text-anchor="middle">4. Medication burden</text>
-    <text x="220" y="494" text-anchor="middle" font-size="13" font-weight="400" fill="#5b6572">MEQ, rescue, tapering</text>
+    <text x="220" y="494" text-anchor="middle" font-size="13" font-weight="400" fill="#5b6572">MEQ, rescue, failed taper</text>
 
     <rect x="415" y="475" width="250" height="78" rx="14" fill="#eef6f7" stroke="#177e89" stroke-width="2"/>
     <text x="540" y="506" text-anchor="middle">5. Safety / harms</text>
@@ -44,17 +45,23 @@
     <text x="860" y="469" text-anchor="middle">6. Durability / rescue</text>
     <text x="860" y="494" text-anchor="middle" font-size="13" font-weight="400" fill="#5b6572">relapse, reintervention</text>
 
-    <rect x="375" y="590" width="330" height="48" rx="18" fill="#fff8e8" stroke="#d8a23a" stroke-width="2"/>
-    <text x="540" y="621" text-anchor="middle" fill="#16324f">7. Mechanism-specific target engagement</text>
+    <rect x="340" y="584" width="400" height="58" rx="20" fill="#fff8e8" stroke="#d8a23a" stroke-width="2"/>
+    <text x="540" y="607" text-anchor="middle" fill="#16324f">7. Mechanism-specific target engagement</text>
+    <text x="540" y="630" text-anchor="middle" font-size="13" font-weight="400" fill="#5b6572">the bridge from innovation to clinical outcomes</text>
+  </g>
+
+  <g font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700">
+    <rect x="86" y="528" width="268" height="32" rx="16" fill="#16324f"/>
+    <text x="220" y="549" text-anchor="middle" fill="#ffffff">MEQ = therapy intensity, not potency</text>
   </g>
 
   <g stroke="#d8a23a" stroke-width="3" stroke-linecap="round" opacity="0.8">
-    <line x1="330" y1="238" x2="449" y2="288"/>
-    <line x1="540" y1="223" x2="540" y2="238"/>
-    <line x1="750" y1="238" x2="631" y2="288"/>
-    <line x1="330" y1="450" x2="449" y2="412"/>
-    <line x1="540" y1="475" x2="540" y2="462"/>
-    <line x1="750" y1="450" x2="631" y2="412"/>
-    <line x1="540" y1="590" x2="540" y2="462"/>
+    <line x1="330" y1="238" x2="449" y2="278"/>
+    <line x1="540" y1="223" x2="540" y2="228"/>
+    <line x1="750" y1="238" x2="631" y2="278"/>
+    <line x1="330" y1="450" x2="449" y2="402"/>
+    <line x1="540" y1="475" x2="540" y2="452"/>
+    <line x1="750" y1="450" x2="631" y2="402"/>
+    <line x1="540" y1="584" x2="540" y2="452"/>
   </g>
 </svg>

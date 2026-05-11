@@ -69,7 +69,7 @@ OH and OI interventions can cause serious harms: supine hypertension, falls from
 
 We propose that OH/OI intervention trials report seven domains as a minimum. Domains 1-6 should be treated as the core outcome-reporting set for most trials, while Domain 7 is an intervention-specific target-engagement set that varies by mechanism. This distinction is important: a venous intervention trial may report time-density curve metrics or pressure gradients, while a drug, compression, or rehabilitation trial should report the mechanistic endpoint that matches its own intervention.
 
-![Figure 1. Multidomain outcome framework for OH/OI intervention trials. Domains 1-6 form the core reporting set around patient-centered net benefit; Domain 7 captures intervention-specific target engagement.](../outputs/figure1_outcome_framework.svg)
+![Figure 1. Multidomain outcome framework for OH/OI intervention trials. Domains 1-6 form the core reporting set around patient-centered net benefit; Domain 7 bridges innovation to established clinical outcomes. MEQ is highlighted within the medication-burden domain as a therapy-intensity metric, not a physiologic-potency claim.](../outputs/figure1_outcome_framework.svg)
 
 | Domain | Core question | Example measures |
 | --- | --- | --- |
@@ -142,14 +142,14 @@ Medication burden should be reported in all intervention trials where medication
 
 For OH-directed vasoactive therapy, MEQ provides a standardized dose-intensity index. This is the most immediately operationalizable medication-burden metric in the framework and should be reported alongside, not instead of, symptoms, hemodynamics, and safety. In the STANDUP source materials, each medication's usual maximum daily dose is assigned 100 MEQ, and lower doses are scaled proportionally:
 
-| Medication | Usual maximum daily dose | Approximate scale | Technical formula |
+| Medication | Usual maximum daily dose | Main-text scale | Spreadsheet formula |
 | --- | ---: | ---: | --- |
-| Midodrine | 30 mg/day | 3.3 MEQ/mg | daily mg x 3.3333 |
-| Droxidopa | 1800 mg/day | 0.056 MEQ/mg | daily mg x 0.055556 |
-| Fludrocortisone | 0.3 mg/day | 333 MEQ/mg | daily mg x 333.3333 |
-| Pyridostigmine | 180 mg/day | 0.56 MEQ/mg | daily mg x 0.55556 |
+| Midodrine | 30 mg/day | 3.33 MEQ/mg | daily mg x 3.33 |
+| Droxidopa | 1800 mg/day | 0.06 MEQ/mg | daily mg x 0.06 |
+| Fludrocortisone | 0.3 mg/day | 333.33 MEQ/mg | daily mg x 333.33 |
+| Pyridostigmine | 180 mg/day | 0.56 MEQ/mg | daily mg x 0.56 |
 
-Total MEQ is the sum of medication-specific MEQ values. MEQ measures intensity of therapy rather than physiologic potency. It assumes dose proportionality and equal maximum-dose weighting across drugs, but midodrine, droxidopa, fludrocortisone, and pyridostigmine differ in onset, duration, mechanism, adverse-effect profile, cost, and patient-specific response. MEQ should therefore be presented as a medication-burden index and validated against patient-centered outcomes, safety, cost, and drug-class-specific adverse effects.
+Total MEQ is the sum of medication-specific MEQ values. Rounded values are sufficient for manuscript presentation; spreadsheet implementations can retain full precision as specified in the supplement. MEQ measures intensity of therapy rather than physiologic potency. It assumes dose proportionality and equal maximum-dose weighting across drugs, but midodrine, droxidopa, fludrocortisone, and pyridostigmine differ in onset, duration, mechanism, adverse-effect profile, cost, and patient-specific response. MEQ should therefore be presented as a medication-burden index and validated against patient-centered outcomes, safety, cost, and drug-class-specific adverse effects.
 
 ### Medication-burden endpoints
 
@@ -200,7 +200,7 @@ For procedural trials, patency, restenosis, thrombosis, reintervention, and imag
 
 ## Domain 7: Mechanism-specific endpoints
 
-Mechanism-specific endpoints are essential for understanding whether an intervention engaged its target. They should not replace patient-centered outcomes. Domains 1-6 are the shared core reporting set; Domain 7 is deliberately intervention-specific.
+Mechanism-specific endpoints are essential for understanding whether an intervention engaged its target. They should not replace patient-centered outcomes. Domains 1-6 are the shared core reporting set; Domain 7 is deliberately intervention-specific. It functions as the bridge between innovation and established clinical metrics: it shows whether a new drug, device, procedure, compression strategy, rehabilitation protocol, or venous intervention actually changed the mechanism it was designed to change.
 
 Examples:
 
@@ -279,12 +279,14 @@ OH and OI intervention trials require multidomain outcome reporting. Orthostatic
 
 ### Table 2. MEQ conversion for OH medication burden
 
-| Medication | Maximum daily dose | Approximate scale | Technical conversion |
+| Medication | Maximum daily dose | Main-text scale | Spreadsheet formula |
 | --- | ---: | ---: | --- |
-| Midodrine | 30 mg/day | 3.3 MEQ/mg | daily mg x 3.3333 |
-| Droxidopa | 1800 mg/day | 0.056 MEQ/mg | daily mg x 0.055556 |
-| Fludrocortisone | 0.3 mg/day | 333 MEQ/mg | daily mg x 333.3333 |
-| Pyridostigmine | 180 mg/day | 0.56 MEQ/mg | daily mg x 0.55556 |
+| Midodrine | 30 mg/day | 3.33 MEQ/mg | daily mg x 3.33 |
+| Droxidopa | 1800 mg/day | 0.06 MEQ/mg | daily mg x 0.06 |
+| Fludrocortisone | 0.3 mg/day | 333.33 MEQ/mg | daily mg x 333.33 |
+| Pyridostigmine | 180 mg/day | 0.56 MEQ/mg | daily mg x 0.56 |
+
+Full-precision conversion factors are provided in the MEQ supplement for spreadsheet or statistical implementation.
 
 ### Table 3. Recommended reporting of medication changes
 
