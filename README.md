@@ -35,6 +35,8 @@ medication-burden domain for OH-directed vasoactive therapy.
     cream, and pale-blue accents
 - `outputs/reporting_outcomes_orthostatic_hypotension_intolerance_trials.html`
   - styled HTML source used to render the PDF
+- `outputs/figure1_outcome_framework.svg`
+  - journal-friendly visual summary of the multidomain outcome framework
 - `tools/build_manuscript_pdf.py`
   - regenerates the HTML and, with `--pdf`, the PDF
 

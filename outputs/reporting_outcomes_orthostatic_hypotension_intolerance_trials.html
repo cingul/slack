@@ -128,6 +128,25 @@ tbody tr:nth-child(odd) td { background: #ffffff; }
   padding: 0.13in 0.16in;
   margin: 0.16in 0;
 }
+.figure {
+  margin: 0.18in 0 0.22in;
+  padding: 0.1in;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  break-inside: avoid;
+}
+.figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.figure figcaption {
+  color: var(--muted);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 8.7pt;
+  line-height: 1.32;
+  margin-top: 0.07in;
+}
 .references {
   font-size: 8.7pt;
   line-height: 1.34;
@@ -191,7 +210,8 @@ tbody tr:nth-child(odd) td { background: #ffffff; }
 <h3>Harms define net benefit</h3>
 <p>OH and OI interventions can cause serious harms: supine hypertension, falls from undertreatment, bradycardia, tachyarrhythmias, urinary retention, edema, electrolyte abnormalities, thrombosis, bleeding, device migration, access-site complications, radiation exposure, contrast nephropathy, and neurologic injury. Safety reporting must be systematic and should not be limited to events judged related to the intervention.</p>
 <h2>Proposed minimum reporting domains</h2>
-<p>We propose that OH/OI intervention trials report seven domains as a minimum. Individual trials may add disease- or intervention-specific outcomes, but these domains should be considered the common foundation.</p>
+<p>We propose that OH/OI intervention trials report seven domains as a minimum. Domains 1-6 should be treated as the core outcome-reporting set for most trials, while Domain 7 is an intervention-specific target-engagement set that varies by mechanism. This distinction is important: a venous intervention trial may report time-density curve metrics or pressure gradients, while a drug, compression, or rehabilitation trial should report the mechanistic endpoint that matches its own intervention.</p>
+<figure class="figure"><img src="figure1_outcome_framework.svg" alt="Figure 1. Multidomain outcome framework for OH/OI intervention trials. Domains 1-6 form the core reporting set around patient-centered net benefit; Domain 7 captures intervention-specific target engagement."><figcaption>Figure 1. Multidomain outcome framework for OH/OI intervention trials. Domains 1-6 form the core reporting set around patient-centered net benefit; Domain 7 captures intervention-specific target engagement.</figcaption></figure>
 <div class="table-wrap"><table>
 <thead><tr><th>Domain</th><th>Core question</th><th>Example measures</th></tr></thead>
 <tbody>
@@ -253,16 +273,16 @@ tbody tr:nth-child(odd) td { background: #ffffff; }
 <li>whether medication changes were protocolized, clinician-directed, or patient-directed.</li>
 </ul>
 <h3>Midodrine Equivalents for OH medication burden</h3>
-<p>For OH-directed vasoactive therapy, MEQ provides a standardized dose-intensity index. In the STANDUP source materials, each medication&#x27;s usual maximum daily dose is assigned 100 MEQ:</p>
+<p>For OH-directed vasoactive therapy, MEQ provides a standardized dose-intensity index. This is the most immediately operationalizable medication-burden metric in the framework and should be reported alongside, not instead of, symptoms, hemodynamics, and safety. In the STANDUP source materials, each medication&#x27;s usual maximum daily dose is assigned 100 MEQ, and lower doses are scaled proportionally:</p>
 <div class="table-wrap"><table>
-<thead><tr><th>Medication</th><th>Usual maximum daily dose</th><th>Conversion factor</th><th>Formula</th></tr></thead>
+<thead><tr><th>Medication</th><th>Usual maximum daily dose</th><th>Approximate scale</th><th>Technical formula</th></tr></thead>
 <tbody>
-<tr><td>Midodrine</td><td>30 mg/day</td><td>3.3333 MEQ/mg</td><td>daily mg x 3.3333</td></tr>
-<tr><td>Droxidopa</td><td>1800 mg/day</td><td>0.055556 MEQ/mg</td><td>daily mg x 0.055556</td></tr>
-<tr><td>Fludrocortisone</td><td>0.3 mg/day</td><td>333.3333 MEQ/mg</td><td>daily mg x 333.3333</td></tr>
-<tr><td>Pyridostigmine</td><td>180 mg/day</td><td>0.55556 MEQ/mg</td><td>daily mg x 0.55556</td></tr>
+<tr><td>Midodrine</td><td>30 mg/day</td><td>3.3 MEQ/mg</td><td>daily mg x 3.3333</td></tr>
+<tr><td>Droxidopa</td><td>1800 mg/day</td><td>0.056 MEQ/mg</td><td>daily mg x 0.055556</td></tr>
+<tr><td>Fludrocortisone</td><td>0.3 mg/day</td><td>333 MEQ/mg</td><td>daily mg x 333.3333</td></tr>
+<tr><td>Pyridostigmine</td><td>180 mg/day</td><td>0.56 MEQ/mg</td><td>daily mg x 0.55556</td></tr>
 </tbody></table></div>
-<p>Total MEQ is the sum of medication-specific MEQ values. MEQ assumes dose proportionality and equal maximum-dose weighting across drugs. These assumptions are pragmatic, not pharmacologic proof of equivalence. MEQ should therefore be presented as a medication-burden index and validated against patient-centered outcomes, safety, and cost.</p>
+<p>Total MEQ is the sum of medication-specific MEQ values. MEQ measures intensity of therapy rather than physiologic potency. It assumes dose proportionality and equal maximum-dose weighting across drugs, but midodrine, droxidopa, fludrocortisone, and pyridostigmine differ in onset, duration, mechanism, adverse-effect profile, cost, and patient-specific response. MEQ should therefore be presented as a medication-burden index and validated against patient-centered outcomes, safety, cost, and drug-class-specific adverse effects.</p>
 <h3>Medication-burden endpoints</h3>
 <p>Recommended endpoints include:</p>
 <ul>
@@ -304,7 +324,7 @@ tbody tr:nth-child(odd) td { background: #ffffff; }
 </ul>
 <p>For procedural trials, patency, restenosis, thrombosis, reintervention, and imaging follow-up should be reported at prespecified intervals.</p>
 <h2>Domain 7: Mechanism-specific endpoints</h2>
-<p>Mechanism-specific endpoints are essential for understanding whether an intervention engaged its target. They should not replace patient-centered outcomes.</p>
+<p>Mechanism-specific endpoints are essential for understanding whether an intervention engaged its target. They should not replace patient-centered outcomes. Domains 1-6 are the shared core reporting set; Domain 7 is deliberately intervention-specific.</p>
 <p>Examples:</p>
 <ul>
 <li>venous intervention: venous pressure gradients, IVUS area, contrast clearance, TDC time-to-peak, mean transit time, exponential decay constant, collateral reflux, patency;</li>
@@ -326,9 +346,9 @@ tbody tr:nth-child(odd) td { background: #ffffff; }
 <tr><td>Unsafe response</td><td>Apparent improvement accompanied by more falls, syncope, severe hypertension, or serious adverse events</td><td>Net benefit questionable</td></tr>
 <tr><td>Discordant response</td><td>One domain improves while another worsens</td><td>Requires transparent reporting and mechanistic interpretation</td></tr>
 </tbody></table></div>
-<p>Composite endpoints should be used cautiously unless each component is clinically meaningful, similarly important, and reported separately.</p>
+<p>Composite endpoints should be used cautiously unless each component is clinically meaningful, similarly important, and reported separately. Discordance should be described rather than hidden. For example, a patient&#x27;s standing SBP drop may improve after an intervention while symptoms worsen because of supine hypertension, headache, urinary retention, or other treatment-related adverse effects. Conversely, symptoms may improve without a large cuff-BP change if cerebral perfusion, standing duration, medication burden, or rescue-therapy use improves.</p>
 <h2>Application to supracardiac venous intervention trials</h2>
-<p>The STANDUP program illustrates the need for multidomain reporting. Venous outflow disorders and jugular venous interventions are emerging areas with heterogeneous indications and outcome measures <sup class="citation">13,14,15</sup>. Source STANDUP materials evaluate supracardiac venous angioplasty and/or stenting for refractory OH/OI using multiple domains:</p>
+<p>The STANDUP program illustrates the need for multidomain reporting. Supracardiac venous outflow disorders and supracardiac venous interventions are emerging areas with heterogeneous indications and outcome measures <sup class="citation">13,14,15</sup>. Source STANDUP materials evaluate supracardiac venous angioplasty and/or stenting for refractory OH/OI using multiple domains:</p>
 <ul>
 <li>orthostatic SBP drop;</li>
 <li>symptom or global clinical improvement;</li>
@@ -354,30 +374,30 @@ tbody tr:nth-child(odd) td { background: #ffffff; }
 <li><strong>Move toward consensus.</strong> Use stakeholder methods to develop a formal core outcome set for OH/OI intervention trials.</li>
 </ol>
 <h2>Limitations of this proposal</h2>
-<p>This framework is a practical proposal, not a completed consensus statement. It has not yet undergone Delphi voting, patient prioritization, regulatory review, or formal psychometric validation. MEQ is specific to OH-directed medications and should not be overextended to all OI therapies. Thresholds such as 50% MEQ reduction, 20% SBP-drop improvement, or 1-point OHQ improvement are useful candidate thresholds but require validation by phenotype and intervention type. Finally, some trials may reasonably prioritize a domain outside this minimum set, provided the rationale is prespecified and all core safety and interpretability domains are still reported.</p>
+<p>This framework is a practical proposal, not a completed consensus statement. It has not yet undergone Delphi voting, patient prioritization, regulatory review, or formal psychometric validation. MEQ is specific to OH-directed medications and should not be overextended to all OI therapies. MEQ also measures treatment intensity rather than physiologic potency: a single index cannot fully capture nonlinear dose-response, different mechanisms, or class-specific toxicities such as midodrine-related urinary retention, fludrocortisone-related edema or hypokalemia, droxidopa cost, or pyridostigmine gastrointestinal effects. Thresholds such as 50% MEQ reduction, 20% SBP-drop improvement, or 1-point OHQ improvement are useful candidate thresholds but require validation by phenotype and intervention type. Finally, some trials may reasonably prioritize a domain outside this minimum set, provided the rationale is prespecified and all core safety and interpretability domains are still reported.</p>
 <h2>Conclusion</h2>
 <p>OH and OI intervention trials require multidomain outcome reporting. Orthostatic hemodynamics, symptoms, function, medication burden, safety, durability, and mechanism-specific endpoints each capture different aspects of therapeutic response. MEQ provides a transparent method for quantifying OH medication burden and can reveal medication-sparing benefits that would otherwise be missed. A standardized reporting framework will improve comparability across interventions, support patient-centered interpretation, and provide the foundation for a formal OH/OI core outcome set.</p>
 <h2>Tables</h2>
 <h3>Table 1. Minimum outcome-reporting set for OH/OI trials</h3>
 <div class="table-wrap"><table>
-<thead><tr><th>Domain</th><th>Report in all trials?</th><th>Notes</th></tr></thead>
+<thead><tr><th>Domain</th><th>Reporting role</th><th>Notes</th></tr></thead>
 <tbody>
-<tr><td>Orthostatic hemodynamics</td><td>Yes</td><td>BP/HR protocol, timing, standing duration, medication timing</td></tr>
-<tr><td>Symptoms/PROs</td><td>Yes</td><td>Use OHQ, COMPASS-31, or phenotype-appropriate instruments</td></tr>
-<tr><td>Function/QOL</td><td>Yes</td><td>Standing/walking tolerance, falls, syncope, ADLs, QOL</td></tr>
-<tr><td>Medication burden</td><td>Yes when medication changes are allowed or expected</td><td>MEQ for OH drugs; class-specific reporting for broader OI</td></tr>
-<tr><td>Safety/harms</td><td>Yes</td><td>Include all-cause and related events</td></tr>
-<tr><td>Durability/rescue</td><td>Yes</td><td>Follow-up timing, relapse, rescue therapy, reintervention</td></tr>
-<tr><td>Mechanistic endpoint</td><td>Intervention dependent</td><td>Demonstrates target engagement</td></tr>
+<tr><td>Orthostatic hemodynamics</td><td>Core domain</td><td>BP/HR protocol, timing, standing duration, medication timing</td></tr>
+<tr><td>Symptoms/PROs</td><td>Core domain</td><td>Use OHQ, COMPASS-31, or phenotype-appropriate instruments</td></tr>
+<tr><td>Function/QOL</td><td>Core domain</td><td>Standing/walking tolerance, falls, syncope, ADLs, QOL</td></tr>
+<tr><td>Medication burden</td><td>Core when medication changes are allowed or expected</td><td>MEQ for OH drugs; class-specific reporting for broader OI</td></tr>
+<tr><td>Safety/harms</td><td>Core domain</td><td>Include all-cause and related events</td></tr>
+<tr><td>Durability/rescue</td><td>Core domain</td><td>Follow-up timing, relapse, rescue therapy, reintervention</td></tr>
+<tr><td>Mechanistic endpoint</td><td>Intervention-specific domain</td><td>Demonstrates target engagement</td></tr>
 </tbody></table></div>
 <h3>Table 2. MEQ conversion for OH medication burden</h3>
 <div class="table-wrap"><table>
-<thead><tr><th>Medication</th><th>Maximum daily dose</th><th>MEQ at maximum dose</th><th>Conversion</th></tr></thead>
+<thead><tr><th>Medication</th><th>Maximum daily dose</th><th>Approximate scale</th><th>Technical conversion</th></tr></thead>
 <tbody>
-<tr><td>Midodrine</td><td>30 mg/day</td><td>100</td><td>daily mg x 3.3333</td></tr>
-<tr><td>Droxidopa</td><td>1800 mg/day</td><td>100</td><td>daily mg x 0.055556</td></tr>
-<tr><td>Fludrocortisone</td><td>0.3 mg/day</td><td>100</td><td>daily mg x 333.3333</td></tr>
-<tr><td>Pyridostigmine</td><td>180 mg/day</td><td>100</td><td>daily mg x 0.55556</td></tr>
+<tr><td>Midodrine</td><td>30 mg/day</td><td>3.3 MEQ/mg</td><td>daily mg x 3.3333</td></tr>
+<tr><td>Droxidopa</td><td>1800 mg/day</td><td>0.056 MEQ/mg</td><td>daily mg x 0.055556</td></tr>
+<tr><td>Fludrocortisone</td><td>0.3 mg/day</td><td>333 MEQ/mg</td><td>daily mg x 333.3333</td></tr>
+<tr><td>Pyridostigmine</td><td>180 mg/day</td><td>0.56 MEQ/mg</td><td>daily mg x 0.55556</td></tr>
 </tbody></table></div>
 <h3>Table 3. Recommended reporting of medication changes</h3>
 <div class="table-wrap"><table>

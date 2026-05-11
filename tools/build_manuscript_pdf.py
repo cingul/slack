@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
 """Build a styled HTML manuscript from Markdown and BibTeX.
 
-The generated HTML is designed for headless Chrome's print-to-PDF renderer.
-It intentionally uses only the Python standard library so the document can be
-rebuilt in lightweight environments.
+The generated HTML is designed for clean PDF rendering with WeasyPrint, with a
+Chrome DevTools fallback for lightweight environments.
 """
 
 from __future__ import annotations
@@ -29,6 +28,7 @@ BIB = ROOT / "references" / "meq_orthostatic_hypotension.bib"
 OUT = ROOT / "outputs"
 HTML_OUT = OUT / "reporting_outcomes_orthostatic_hypotension_intolerance_trials.html"
 PDF_OUT = OUT / "reporting_outcomes_orthostatic_hypotension_intolerance_trials.pdf"
+FIGURE_OUT = OUT / "figure1_outcome_framework.svg"
 
 
 def parse_bibtex(text: str) -> dict[str, dict[str, str]]:
@@ -91,6 +91,72 @@ def format_reference(fields: dict[str, str]) -> str:
     return citation.strip()
 
 
+def write_framework_figure(path: Path) -> None:
+    """Write Figure 1 as a standalone SVG used by the HTML/PDF build."""
+    svg = """<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="690" viewBox="0 0 1080 690" role="img" aria-labelledby="title desc">
+  <title id="title">Multidomain outcome framework for OH/OI intervention trials</title>
+  <desc id="desc">Six core reporting domains surround patient-centered net benefit, with mechanism-specific target engagement as an intervention-specific domain.</desc>
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="5" stdDeviation="6" flood-color="#16324f" flood-opacity="0.14"/>
+    </filter>
+    <linearGradient id="center" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#16324f"/>
+      <stop offset="1" stop-color="#177e89"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="690" fill="#fbf8f0"/>
+  <rect x="34" y="34" width="1012" height="622" rx="28" fill="#ffffff" stroke="#d8a23a" stroke-width="3"/>
+  <text x="540" y="80" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" fill="#16324f">Figure 1. Multidomain outcome framework</text>
+  <text x="540" y="112" text-anchor="middle" font-family="Georgia, serif" font-size="18" fill="#5b6572">Domains 1-6 form the shared core; Domain 7 demonstrates intervention-specific target engagement.</text>
+  <circle cx="540" cy="350" r="112" fill="url(#center)" filter="url(#shadow)"/>
+  <text x="540" y="326" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#ffffff">Patient-centered</text>
+  <text x="540" y="353" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#ffffff">net benefit</text>
+  <text x="540" y="386" text-anchor="middle" font-family="Georgia, serif" font-size="15" fill="#eef6f7">benefit + burden + safety</text>
+
+  <g font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" fill="#16324f">
+    <rect x="95" y="168" width="250" height="78" rx="14" fill="#eef6f7" stroke="#177e89" stroke-width="2"/>
+    <text x="220" y="199" text-anchor="middle">1. Hemodynamics</text>
+    <text x="220" y="224" text-anchor="middle" font-size="13" font-weight="400" fill="#5b6572">BP, HR, standing time</text>
+
+    <rect x="415" y="145" width="250" height="78" rx="14" fill="#eef6f7" stroke="#177e89" stroke-width="2"/>
+    <text x="540" y="176" text-anchor="middle">2. Symptoms / PROs</text>
+    <text x="540" y="201" text-anchor="middle" font-size="13" font-weight="400" fill="#5b6572">OHQ, COMPASS-31, PGI</text>
+
+    <rect x="735" y="168" width="250" height="78" rx="14" fill="#eef6f7" stroke="#177e89" stroke-width="2"/>
+    <text x="860" y="199" text-anchor="middle">3. Function / QOL</text>
+    <text x="860" y="224" text-anchor="middle" font-size="13" font-weight="400" fill="#5b6572">falls, ADLs, SF-36</text>
+
+    <rect x="95" y="438" width="250" height="78" rx="14" fill="#eef6f7" stroke="#177e89" stroke-width="2"/>
+    <text x="220" y="469" text-anchor="middle">4. Medication burden</text>
+    <text x="220" y="494" text-anchor="middle" font-size="13" font-weight="400" fill="#5b6572">MEQ, rescue, tapering</text>
+
+    <rect x="415" y="475" width="250" height="78" rx="14" fill="#eef6f7" stroke="#177e89" stroke-width="2"/>
+    <text x="540" y="506" text-anchor="middle">5. Safety / harms</text>
+    <text x="540" y="531" text-anchor="middle" font-size="13" font-weight="400" fill="#5b6572">AEs, syncope, supine HTN</text>
+
+    <rect x="735" y="438" width="250" height="78" rx="14" fill="#eef6f7" stroke="#177e89" stroke-width="2"/>
+    <text x="860" y="469" text-anchor="middle">6. Durability / rescue</text>
+    <text x="860" y="494" text-anchor="middle" font-size="13" font-weight="400" fill="#5b6572">relapse, reintervention</text>
+
+    <rect x="375" y="590" width="330" height="48" rx="18" fill="#fff8e8" stroke="#d8a23a" stroke-width="2"/>
+    <text x="540" y="621" text-anchor="middle" fill="#16324f">7. Mechanism-specific target engagement</text>
+  </g>
+
+  <g stroke="#d8a23a" stroke-width="3" stroke-linecap="round" opacity="0.8">
+    <line x1="330" y1="238" x2="449" y2="288"/>
+    <line x1="540" y1="223" x2="540" y2="238"/>
+    <line x1="750" y1="238" x2="631" y2="288"/>
+    <line x1="330" y1="450" x2="449" y2="412"/>
+    <line x1="540" y1="475" x2="540" y2="462"/>
+    <line x1="750" y1="450" x2="631" y2="412"/>
+    <line x1="540" y1="590" x2="540" y2="462"/>
+  </g>
+</svg>
+"""
+    path.write_text(svg)
+
+
 class MarkdownRenderer:
     def __init__(self, bib_entries: dict[str, dict[str, str]]) -> None:
         self.bib_entries = bib_entries
@@ -127,6 +193,19 @@ class MarkdownRenderer:
         out.append("</tbody></table></div>")
         return "\n".join(out)
 
+    def render_image(self, line: str) -> str | None:
+        match = re.match(r"!\[([^\]]+)\]\(([^)]+)\)", line)
+        if not match:
+            return None
+        caption = match.group(1)
+        src = Path(match.group(2)).name
+        return (
+            "<figure class=\"figure\">"
+            f"<img src=\"{html.escape(src)}\" alt=\"{html.escape(caption)}\">"
+            f"<figcaption>{self.inline(caption)}</figcaption>"
+            "</figure>"
+        )
+
     def render(self, markdown: str) -> str:
         lines = markdown.splitlines()
         blocks: list[str] = []
@@ -162,6 +241,14 @@ class MarkdownRenderer:
                     table_lines.append(lines[i])
                     i += 1
                 blocks.append(self.render_table(table_lines))
+                continue
+
+            image_html = self.render_image(line)
+            if image_html:
+                flush_paragraph()
+                close_lists()
+                blocks.append(image_html)
+                i += 1
                 continue
 
             heading = re.match(r"^(#{1,4})\s+(.+)$", line)
@@ -340,6 +427,25 @@ tbody tr:nth-child(odd) td { background: #ffffff; }
   border-left: 5px solid var(--teal);
   padding: 0.13in 0.16in;
   margin: 0.16in 0;
+}
+.figure {
+  margin: 0.18in 0 0.22in;
+  padding: 0.1in;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  break-inside: avoid;
+}
+.figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.figure figcaption {
+  color: var(--muted);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 8.7pt;
+  line-height: 1.32;
+  margin-top: 0.07in;
 }
 .references {
   font-size: 8.7pt;
@@ -554,6 +660,7 @@ def render_pdf(html_path: Path, pdf_path: Path) -> None:
 
 def main() -> None:
     OUT.mkdir(exist_ok=True)
+    write_framework_figure(FIGURE_OUT)
     bib_entries = parse_bibtex(BIB.read_text())
     renderer = MarkdownRenderer(bib_entries)
     body = renderer.render(MANUSCRIPT.read_text())

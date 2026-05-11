@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Midodrine Equivalents (MEQ; also called ME in some STANDUP source documents) quantify orthostatic hypotension (OH) medication burden across common vasoactive medications. MEQ is designed for research reporting and medication-burden analysis. It is not a prescribing recommendation and should not be used to imply direct pharmacologic interchangeability.
+Midodrine Equivalents (MEQ; also called ME in some STANDUP source documents) quantify orthostatic hypotension (OH) medication burden across common vasoactive medications. MEQ is designed for research reporting and medication-burden analysis. It measures treatment intensity rather than physiologic potency. It is not a prescribing recommendation and should not be used to imply direct pharmacologic interchangeability.
 
 ## Framework version
 
@@ -20,12 +20,12 @@ Total MEQ is the sum of all medication-specific MEQ values.
 
 ## Conversion table
 
-| Medication | Unit | Usual maximum daily dose | Conversion factor | Formula |
+| Medication | Unit | Usual maximum daily dose | Approximate scale | Technical formula |
 | --- | --- | ---: | ---: | --- |
-| Midodrine | mg/day | 30 | 3.3333 MEQ/mg | total daily mg x 3.3333 |
-| Droxidopa | mg/day | 1800 | 0.055556 MEQ/mg | total daily mg x 0.055556 |
-| Fludrocortisone | mg/day | 0.3 | 333.3333 MEQ/mg | total daily mg x 333.3333 |
-| Pyridostigmine | mg/day | 180 | 0.55556 MEQ/mg | total daily mg x 0.55556 |
+| Midodrine | mg/day | 30 | 3.3 MEQ/mg | total daily mg x 3.3333 |
+| Droxidopa | mg/day | 1800 | 0.056 MEQ/mg | total daily mg x 0.055556 |
+| Fludrocortisone | mg/day | 0.3 | 333 MEQ/mg | total daily mg x 333.3333 |
+| Pyridostigmine | mg/day | 180 | 0.56 MEQ/mg | total daily mg x 0.55556 |
 
 ## Calculation steps
 
@@ -122,4 +122,4 @@ MEQ reduction should be interpreted as favorable only if there is no clinically 
 
 ## Limitations
 
-MEQ assumes dose proportionality and equal maximum-dose weighting across medications. These assumptions improve usability but may not reflect true biologic potency, pharmacokinetics, adverse-effect burden, or patient-specific response. Future studies should validate MEQ against OHQ, standing time, falls, syncope, supine hypertension, quality of life, and medication adverse effects.
+MEQ assumes dose proportionality and equal maximum-dose weighting across medications. These assumptions improve usability but may not reflect true biologic potency, pharmacokinetics, nonlinear dose-response, adverse-effect burden, class-specific toxicity, cost, or patient-specific response. Future studies should validate MEQ against OHQ, standing time, falls, syncope, supine hypertension, quality of life, and medication adverse effects.
