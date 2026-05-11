@@ -28,6 +28,23 @@ medication-burden domain for OH-directed vasoactive therapy.
 - `references/meq_orthostatic_hypotension.bib`
   - BibTeX references for the manuscript draft
 
+## PDF output
+
+- `outputs/reporting_outcomes_orthostatic_hypotension_intolerance_trials.pdf`
+  - polished PDF export using a Georgia-style serif theme with navy, teal, gold,
+    cream, and pale-blue accents
+- `outputs/reporting_outcomes_orthostatic_hypotension_intolerance_trials.html`
+  - styled HTML source used to render the PDF
+- `tools/build_manuscript_pdf.py`
+  - regenerates the HTML and, with `--pdf`, the PDF
+
+To regenerate locally:
+
+```sh
+python3 -m pip install -r tools/pdf-requirements.txt
+python3 tools/build_manuscript_pdf.py --pdf
+```
+
 ## Uploaded source documents
 
 - `Standup1_final8.docx`
