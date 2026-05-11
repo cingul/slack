@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="760" viewBox="0 0 1180 760" role="img" aria-labelledby="title desc">
+  <title id="title">Multidomain outcome framework for OH/OI intervention trials</title>
+  <desc id="desc">A central heptagon represents patient-centered net benefit, with one reporting domain extending from each face.</desc>
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="5" stdDeviation="6" flood-color="#16324f" flood-opacity="0.14"/>
+    </filter>
+    <linearGradient id="center" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#16324f"/>
+      <stop offset="1" stop-color="#177e89"/>
+    </linearGradient>
+  </defs>
+  <rect width="1180" height="760" fill="#fbf8f0"/>
+  <rect x="34" y="34" width="1112" height="692" rx="28" fill="#ffffff" stroke="#d8a23a" stroke-width="3"/>
+  <text x="590" y="76" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" fill="#16324f">Figure 1. Multidomain outcome framework</text>
+  <text x="590" y="107" text-anchor="middle" font-family="Georgia, serif" font-size="18" fill="#5b6572">Each domain extends from a distinct face of the patient-centered net-benefit polygon.</text>
+
+  <g stroke="#d8a23a" stroke-width="3" stroke-linecap="round" opacity="0.82">
+    <line x1="543" y1="267" x2="345" y2="190"/>
+    <line x1="637" y1="267" x2="590" y2="200"/>
+    <line x1="696" y1="346" x2="840" y2="190"/>
+    <line x1="675" y1="438" x2="855" y2="384"/>
+    <line x1="590" y1="478" x2="798" y2="565"/>
+    <line x1="506" y1="438" x2="383" y2="565"/>
+    <line x1="485" y1="346" x2="340" y2="384"/>
+  </g>
+
+  <polygon points="590,240 684,295 707,397 642,478 538,478 473,397 496,295" fill="url(#center)" stroke="#d8a23a" stroke-width="4" filter="url(#shadow)"/>
+  <text x="590" y="325" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="#ffffff">Patient-centered</text>
+  <text x="590" y="353" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="#ffffff">net benefit</text>
+  <text x="590" y="385" text-anchor="middle" font-family="Georgia, serif" font-size="15" fill="#eef6f7">benefit + burden + safety</text>
+
+  <g font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" fill="#16324f">
+    <rect x="80" y="152" width="265" height="78" rx="14" fill="#eef6f7" stroke="#177e89" stroke-width="2"/>
+    <text x="212" y="183" text-anchor="middle">1. Hemodynamics</text>
+    <text x="212" y="208" text-anchor="middle" font-size="13" font-weight="400" fill="#5b6572">BP, HR, standing time</text>
+
+    <rect x="458" y="122" width="265" height="78" rx="14" fill="#eef6f7" stroke="#177e89" stroke-width="2"/>
+    <text x="590" y="153" text-anchor="middle">2. Symptoms / PROs</text>
+    <text x="590" y="178" text-anchor="middle" font-size="13" font-weight="400" fill="#5b6572">OHQ, COMPASS-31, PGI</text>
+
+    <rect x="840" y="152" width="265" height="78" rx="14" fill="#eef6f7" stroke="#177e89" stroke-width="2"/>
+    <text x="972" y="183" text-anchor="middle">3. Function / QOL</text>
+    <text x="972" y="208" text-anchor="middle" font-size="13" font-weight="400" fill="#5b6572">falls, ADLs, SF-36</text>
+
+    <rect x="855" y="345" width="265" height="84" rx="14" fill="#fff8e8" stroke="#d8a23a" stroke-width="2.5"/>
+    <text x="987" y="374" text-anchor="middle">4. Medication burden</text>
+    <text x="987" y="398" text-anchor="middle" font-size="13" font-weight="400" fill="#5b6572">MEQ, rescue, failed taper</text>
+    <text x="987" y="417" text-anchor="middle" font-size="12" font-weight="700" fill="#177e89">therapy intensity, not potency</text>
+
+    <rect x="665" y="565" width="265" height="78" rx="14" fill="#eef6f7" stroke="#177e89" stroke-width="2"/>
+    <text x="797" y="596" text-anchor="middle">5. Safety / harms</text>
+    <text x="797" y="621" text-anchor="middle" font-size="13" font-weight="400" fill="#5b6572">AEs, syncope, supine HTN</text>
+
+    <rect x="250" y="565" width="265" height="78" rx="14" fill="#eef6f7" stroke="#177e89" stroke-width="2"/>
+    <text x="382" y="596" text-anchor="middle">6. Durability / rescue</text>
+    <text x="382" y="621" text-anchor="middle" font-size="13" font-weight="400" fill="#5b6572">relapse, reintervention</text>
+
+    <rect x="75" y="345" width="265" height="84" rx="14" fill="#fff8e8" stroke="#d8a23a" stroke-width="2.5"/>
+    <text x="207" y="374" text-anchor="middle">7. Mechanism-specific</text>
+    <text x="207" y="398" text-anchor="middle" font-size="13" font-weight="400" fill="#5b6572">target engagement</text>
+    <text x="207" y="417" text-anchor="middle" font-size="12" font-weight="700" fill="#177e89">bridge to clinical outcomes</text>
+  </g>
+</svg>
